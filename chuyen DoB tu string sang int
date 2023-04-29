@@ -1,0 +1,45 @@
+struct student
+{
+    char ID[10];
+    char name[30];
+    char DoB[11];
+
+};
+struct daymonthyear
+{
+    int no;
+    int date;
+    int month;
+    int year;
+};
+struct student student[10] = {
+    {"22BI13197", "Nguyen Quang Huy", "07/05/1999"},
+    {"22BI13471", "Do Duc Vinh", "15/03/2004"},
+    {"22BI13432", "Nguyen Ngoc Thanh Truc", "10/08/2004"},
+    {"BA12-019", "Nguyen Ngoc Anh", "09/04/2003"},
+    {"22BI13414", "Nguyen Phuong Thao", "23/02/2004"},
+    {"22BI13362", "Duong Thu Phuong", "21/09/2004"},
+    {"22BI13083", "Vu Gia Dat", "01/11/2004"},
+    {"22BI13176", "Tran Huy Hoang", "17/08/2004"},
+    {"22BI13131", "Nguyen Truong Giang", "20/06/2004"},
+    {"BA12-016", "Nguyen Nu Lan Anh", "03/02/2003"},
+};
+struct daymonthyear DMY[10];
+void AgeFunction(struct student student[], struct daymonthyear DMY[]) 
+{
+    for(int i = 0; i < 10; i++)
+{
+    char date[2], month[2], year[4];
+    for(int d = 0; d < 2; d++)
+        date[d] = student[i].DoB[d];
+    for(int m = 0; m < 2; m++)
+        month[m] = student[i].DoB[m+3];
+    for(int y = 0; y < 4; y++)
+        year[y] = student[i].DoB[y+6];
+    DMY[i].no = 0;
+    DMY[i].date = atoi(date);
+    DMY[i].month = atoi(month);
+    DMY[i].year = atoi(year);
+    
+
+}}
