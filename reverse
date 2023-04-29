@@ -1,0 +1,13 @@
+void reverseFunction(char c[])
+{
+    int i = 0;
+    while (c[i] != '\0') {
+        i++;
+    }
+for (int n = 0; n < i / 2; n++)
+{
+    char a = c[n];
+    c[n] = c[i - n - 1];
+    c[i - n - 1] = a;
+}
+}
